@@ -63,4 +63,10 @@ button{
     width: 74 px;
     align-self: flex-end;
 }
-
+/* #card1{
+    margin: -5px;
+} */
+.container{
+    display: grid;
+    grid-template-rows: 1 fr , 1fr;
+}
