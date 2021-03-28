@@ -53,17 +53,21 @@ function App() {
     <div className="App">
 
       <div className='container'>
-        <div><CatList movies={moviesState} filter={applyFilter} /></div>
-        <div className="row row-cols-1 row row-cols-lg-2">
-          {showedMovies.map((movie) => (
-            <Card key={movie.id} movie={movie} delete={deleteCard} />
-          ))}
+        <div className="mt-4 mb-3">
+          <CatList key="catList" movies={moviesState} filter={applyFilter} />
+        </div>
+        <div className="row">
+          <div className="row col-md-10 offset-md-1">
+            {showedMovies.map((movie) => (
+              <div className="col-md-6" key={`card-${movie.id}`}>
+                <Card key={movie.id} movie={movie} delete={deleteCard} />
+              </div>
+            ))}
+          </div>
         </div>
         <Pagination key="pagination"
           movies={filtredMovies}
-          apply={applyPagination}/>
-
-
+          apply={applyPagination} />
       </div>
     </div >
   );

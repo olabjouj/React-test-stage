@@ -1,42 +1,10 @@
-/* 
-  .row{
-     display: grid;
-    grid-template-rows: repeat(2 , 1fr); 
-    grid-gap: 20px;
-        
-
+.delete-icon {
+    cursor: pointer;
 }
-#like{
-grid-row: 1;
-}
-#deslike{
-    grid-row: 2;
-    }
-/* */
-/* #card1{
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
 
+.delete-icon:hover {
+    color: red;
 }
-#card2{
-    display: grid;
-    grid-column: 1;
-    grid-row: 2;
-
-}
-#card3{
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
-
-}
-#card4{
-    display: grid;
-    grid-column: 2;
-    grid-row: 2;
-
-}  */ */
 
 .aimer{
     vertical-align: inherit;
@@ -70,3 +38,4 @@ button{
     display: grid;
     grid-template-rows: 1 fr , 1fr;
 }
+

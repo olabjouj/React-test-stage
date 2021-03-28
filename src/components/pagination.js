@@ -45,8 +45,8 @@ function Pagination(props) {
     }
 
     return (
-        <div className="row">
-            <div className="col-md-10 ">
+        <div className="row mt-3">
+            <div className="col-md-6 offset-2 ">
                 <ul className="pagination">
                     <li className={`page-item ${selectedPage === 1 ? "disabled" : ""}`}
                         onClick={goToPres} key="prev">

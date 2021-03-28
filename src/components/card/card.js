@@ -21,10 +21,17 @@ const Card = (props) => {
     }
 
     return (
-        <div id="card1" className="card text-white bg-dark mb-3">
-            <button type="button" className="btn-close" aria-label="Close"
-                onClick={() => deleteFunction(movie.id)}>X</button>
-            <div className="card-header"><h1>{movie.title}</h1></div>
+        <div className="card mb-2 mt-2">
+            <div className="card-header">
+                <div className="row">
+                    <div className="col-10">
+                        <h2>{movie.title}</h2>
+                    </div>
+                    <div className="col-2 text-center">
+                        <i className="far fa-trash-alt fa-lg delete-icon" onClick={() => deleteFunction(movie.id)}></i>
+                    </div>
+                </div>
+            </div>
             <div className="card-body">
                 <h5 className="card-title">Ctégorie : {movie.category}</h5>
                 <br></br>
