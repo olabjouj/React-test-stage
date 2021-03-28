@@ -1,24 +1,28 @@
 import React, { useState } from 'react';
-import movies from '../../data/movies';
+// import movies from "./data/movies";
 import "./catList.css";
+import { Multiselect } from 'multiselect-react-dropdown';
 
 
 function CatList(props) {
+    const applyFilter= props.filter;
     const categorylist = new Set();
+    
     for (var i = 0; i < props.movies.length; i++) {
         categorylist.add(props.movies[i].category)
     }
-    // const filtrFunction = props.filtCat;
+
+    const categorymap = [];
+    categorylist.forEach(category => categorymap.push({ "category": category }))
+
+
+    const filter = (selectedList) => {
+        applyFilter(selectedList.map((elem)=> elem.category));
+    }
     return (
         <div>
-            <div class="list-group"> 
-                    <label class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox">
-                       
-                        </input>
-                        {categorylist}</label>
-            </div>
-
+            <Multiselect options={categorymap} displayValue='category' onSelect={filter}
+             onRemove={filter} />
         </div>
     );
 }

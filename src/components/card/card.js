@@ -33,7 +33,7 @@ const Card = (props) => {
                     <p className="card-text">{dislikes} Dislikes</p>
                 </div>
             </div>
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <div className="btn-group" role="group" aria-label="Basic mixed styles example">
                 <button onClick={() => like()} type="button" className="btn btn-danger">Like</button>
                 <button onClick={() => desLike()} type="button" className="btn btn-success">DesLike</button>
             </div>
